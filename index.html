@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of Elements 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="select-nation">
+        <h1 class="title">War of Elements 🔥💧🌱</h1>
+        <h2 class="sub-title">Choose your element</h2>
+       
+        <div id="selection-cards" class="cards">
+            <!-- <input type="radio" name="element" id="fire" >
+            <label class="card-selection" for="fire">
+                <p>Fire nation</p>
+                <img src="img/fire-removebg-preview.png" alt="Fire Nation">
+            </label> -->
+        </div>
+        <p>
+            <button id="button-nation">Select</button>
+        </p>
+        <div id="selection-mode" clas="mode">
+            <input type="radio" name="mode" id="quick-battle" checked>
+            <label class="card-mode" for="quick-battle"> Quick Battle</label>
+            <input type="radio" name="mode" id="map-battle" >
+            <label class="card-mode" for="map-battle"> Map</label>
+            <input type="radio" name="mode" id="online-battle" >
+            <label class="card-mode" for="online-battle"> Online</label>
+        </div>
+    </section>
+    <section id="show-map"> 
+        <h1 class="title">War of Elements 🔥💧🌱</h1>
+        <h2 class="sub-title">Defeat all enemies with your army</h2>
+        <canvas id="map"></canvas>
+        <button onmouseup="stopCharacter()" onmousedown="moveCharacter(1)"> Up</button>
+        <div> 
+            <button onmouseup="stopCharacter()" onmousedown="moveCharacter(4)"> Left</button>
+            <button onmouseup="stopCharacter()" onmousedown="moveCharacter(2)"> Down</button>
+            <button onmouseup="stopCharacter()" onmousedown="moveCharacter(3)"> Right</button>
+        </div>
+       
+    </section>
+    <section id="select-attack">
+        <h1 class="title">War of Elements 🔥💧🌱</h1>
+        <h2 class="sub-title">Choose your attack</h2>
+        <div id="skills" class="attacks" >
+            <!-- <button id="button-fire" class="button-attack">Fire🔥 </button>-->
+        </div>
+        <div id="stasts" class="info">
+            <div class="stasts-player">
+                <p id="player"></p>
+                <p id="lifes">Lifes:</p>
+                <div id="player-lifes">3</div>
+            </div>
+            <div class="stasts-pc">
+                <p id="pc"></p>
+                <p id="lifes"> Lifes:</p>
+                <div id="pc-lifes">3</div>
+            </div>
+        </div>
+        <div>
+            <section id="messages" class="state-message">
+                <p id="player-state"> Good luck!</p>
+                <p id="pc-state"></p>
+                <p id="battle-state"></p>
+            </section>
+            <section id="final-message" class="final-state">
+                <p>
+                    <button id="button-restart">Restart</button>
+                </p>
+            </section>
+            <section id="history"> 
+                <section id="player-history">
+                    <p>Player attack</p>
+                </section>
+                <section id="pc-history">
+                   <p>Enemy attack</p> 
+                </section>
+                <section id="result-screen">
+                    <p>Result</p>
+                </section>
+            </section>
+            
+        </div>
+    </section>
+    <script src="js/codigo.js"></script>
+    
+</body>
+</html>

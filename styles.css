@@ -1,172 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap");
 
-body{
-    font-family: 'Fredoka One', cursive;
-    background-color: #CFF5E7;
+body {
+  font-family: "Fredoka One", cursive;
+  background-color: #cff5e7;
 }
 
-#select-nation{
+#select-nation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  color: #ff1e1e;
+  font-size: 32px;
+}
+.sub.title {
+  font-size: 20px;
+}
+.cards,
+.attacks {
+  display: flex;
+  gap: 10px;
+}
+.card-selection {
+  width: 132px;
+  height: 100px;
+  background: #a0e4cb;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.card-selection img {
+  width: 70px;
+}
+.cards input {
+  display: none;
+}
+.cards input:checked + label {
+  width: 150px;
+  background-color: #0d4c92;
+}
+
+#selection-mode {
+  display: grid;
+  grid-template-columns: 30px 125px;
+  justify-items: center;
+}
+
+#button-nation {
+  font-family: "Poppins", sans-serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+#show-map {
+  flex-direction: column;
+  align-items: center;
+}
+
+#show-map button {
+  font-family: "Poppins", sans-serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+#map {
+  border: 1px solid black;
+}
+
+#select-attack {
+  flex-direction: column;
+  align-items: center;
+}
+.button-attack {
+  font-family: "Poppins", sans-serif;
+  width: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 125px 125px;
+}
+.stasts-player,
+.stasts-pc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#player,
+#player-lifes,
+#pc,
+#pc-lifes {
+  margin-bottom: 0px;
+}
+#lifes {
+  margin: 0px;
+}
+
+.state-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 80px;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #a0e4cb;
+  border: 1px solid black;
+}
+#player-state {
+  margin: 0px;
+}
+#pc-state {
+  margin: 0px;
+}
+#battle-state {
+  margin: 0px;
+}
+.final-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#button-restart {
+  font-family: "Poppins", sans-serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+#history {
+  grid-template-columns: 125px 125px 125px;
+  justify-content: center;
+}
+
+#player-history,
+#pc-history,
+#result-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 360px) {
+  .cards,
+  .attacks {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  #show-map div {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.title{
-    color:#FF1E1E;
-    font-size: 32px;
-
-}
-.sub.title{
-    font-size: 20px;
-}
-.cards, .attacks{
-    display: flex;
-    gap: 10px;
-}
-.card-selection{
-    width: 132px;
-    height: 100px;
-    background:#A0E4CB;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    display: flex;
-    border: 1px solid black;
-}
-
-.card-selection img{
-    width: 70px;
-}
-.cards input{
-    display: none;
-}
-.cards input:checked+label{
-    width: 150px;
-    background-color: #0D4C92;
-}
-
-#selection-mode{
-    display:grid;
-    grid-template-columns: 30px 125px;
-    justify-items: center;
-}
-
-#button-nation{
-    font-family: 'Poppins', sans-serif;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border: 1px solid black;
-    margin-top: 10px;
-}
-
-#show-map{
-    flex-direction: column;
-    align-items: center;
-}
-
-#show-map button{
-    font-family: 'Poppins', sans-serif;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border: 1px solid black;
-    margin-top: 5px;
-}
-
-#map{
-    border: 1px solid black;
-}
-
-#select-attack{
-    flex-direction: column;
-    align-items: center;
-}
-.button-attack{
-    font-family: 'Poppins', sans-serif;
-    width: 100px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-
-.info{
-    display: grid;
-    grid-template-columns: 125px 125px;
-}
-.stasts-player, .stasts-pc{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-#player, #player-lifes,#pc, #pc-lifes{
-    margin-bottom: 0px;
-}
-#lifes{
-    margin: 0px;
-}
-
-.state-message{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 80px;
-    padding: 10px;
-    margin-top: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background:#A0E4CB; 
-    border: 1px solid black;   
-}
-#player-state{
-    margin: 0px;
-}
-#pc-state{
-    margin: 0px;
-}
-#battle-state{
-    margin: 0px;
-}
-.final-state{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#button-restart{
-    font-family: 'Poppins', sans-serif;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border: 1px solid black;
-}
-
-#history{
-    grid-template-columns: 125px 125px 125px;
-    justify-content: center;
-
-}
-
-#player-history, #pc-history, #result-screen{
-display: flex;
-flex-direction: column;
-align-items: center;
-} 
-
-@media (max-width: 360px){
-    .cards, .attacks{
-        flex-direction: column;
-    }
-
-}
-
-@media (max-width: 360px){
-    #show-map div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  }
 }
